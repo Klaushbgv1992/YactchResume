@@ -49,49 +49,15 @@ body {
     right: auto !important;
 }
 
-.controls {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 30px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.button-group {
+/* Container styling for centered resume */
+.container {
     display: flex;
-    gap: 15px;
-    margin-top: 15px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
 }
 
-button {
-    background-color: #00a69c;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 15px;
-    transition: background-color 0.3s ease;
-    flex: 1;
-}
-
-button:hover {
-    background-color: #008b82;
-}
-
-button:disabled {
-    background-color: #7fcec8;
-    cursor: wait;
-}
-
-#downloadPngBtn {
-    background-color: #3d7ee6;
-}
-
-#downloadPngBtn:hover {
-    background-color: #2b5fc3;
-}
+/* Remove all button styling as we no longer need it */
 
 .resume-container {
     background-color: transparent;
