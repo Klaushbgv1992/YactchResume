@@ -1,0 +1,12 @@
+{
+  "name": "heinrich-yacht-resume",
+  "version": "1.0.0",
+  "description": "Heinrich Schroder's Yacht Resume",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.0.0"
+  }
+}

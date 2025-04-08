@@ -1,0 +1,4 @@
+[file]
+  ignore = [
+    "profile.png"
+  ]

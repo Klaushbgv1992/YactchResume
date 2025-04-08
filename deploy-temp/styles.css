@@ -1,0 +1,588 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* For A4 printing */
+/* US Letter size for printing - no margins */
+@page {
+    size: letter portrait;
+    margin: 0;
+    bleed: 0;
+}
+
+.printing-container {
+    width: 8.5in;
+    height: 11in;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    overflow: hidden;
+    border: none;
+}
+
+.for-pdf {
+    width: 8.5in;
+    height: 11in;
+    margin: 0 auto !important;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    overflow: hidden;
+    background-color: white;
+    transform: none !important;
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+}
+
+.controls {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+button {
+    background-color: #00a69c;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+    flex: 1;
+}
+
+button:hover {
+    background-color: #008b82;
+}
+
+button:disabled {
+    background-color: #7fcec8;
+    cursor: wait;
+}
+
+#downloadPngBtn {
+    background-color: #3d7ee6;
+}
+
+#downloadPngBtn:hover {
+    background-color: #2b5fc3;
+}
+
+.resume-container {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Resume 1 Styles */
+#resume-main {
+    padding: 0;
+    position: relative;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    /* Standard US Letter size for screen display */
+    width: 100%;
+    max-width: 8.5in;
+    height: 11in; /* Use fixed height instead of min-height */
+    margin: 0 auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-title {
+    color: #00a69c;
+    font-size: 32px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    padding-left: 0;
+}
+
+.resume-subtitle {
+    color: #444;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.resume-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.resume-list li {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.experience-section {
+    margin-top: 25px;
+}
+
+.job-entry {
+    margin-bottom: 20px;
+}
+
+.job-entry h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.company-location {
+    font-style: italic;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.job-entry ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+.job-entry li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+    font-size: 13.5px;
+    color: #333;
+}
+
+.references-section {
+    margin-top: auto; /* Push to the bottom */
+    padding: 10px 0 0;
+    border-top: 1px solid #eee;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.reference-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reference-column {
+    width: 48%;
+}
+
+.references-section h3 {
+    margin-bottom: 15px;
+    color: #444;
+    font-weight: 500;
+}
+
+.references-section p {
+    margin-bottom: 4px;
+    line-height: 1.15;
+    font-size: 10.5px;
+    color: #333;
+}
+
+/* Resume 2 Styles */
+
+
+.header-section {
+    background-color: #00a69c;
+    color: white;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Special header styling for PDF */
+.for-pdf .header-section {
+    padding: 25px 40px 25px 40px;
+    width: calc(100% - 80px);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.personal-info h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.personal-info h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    letter-spacing: 0.3px;
+    opacity: 0.95;
+}
+
+.location {
+    font-size: 15px;
+    margin-top: 15px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.profile-photo {
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    border: 4px solid white;
+    margin-left: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    background-image: url('profile.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.summary {
+    padding: 12px 40px;
+    text-align: center;
+    line-height: 1.3;
+    font-size: 11px;
+    border-bottom: none; /* Removed border to blend with skills section */
+    color: #333;
+    background-color: #fafafa; /* Matched with left-column background */
+}
+
+.two-column-section {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    position: static;
+    box-sizing: border-box;
+    flex-grow: 1; /* Make this section fill available space */
+    flex-direction: row;
+}
+
+.left-column {
+    width: 38%;
+    padding: 15px 15px 15px 20px;
+    border-right: 1px solid #eee;
+    background-color: #fafafa;
+    margin-top: -1px; /* Ensure no gap between sections */
+}
+
+.right-column {
+    width: 62%;
+    padding: 15px 20px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details {
+    margin-bottom: 25px;
+}
+
+.contact-details h3, .profile-section h3, .skills-section h3, .work-experience h3 {
+    color: #00a69c;
+    margin-bottom: 8px;
+    margin-top: 15px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #00a69c;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.work-experience h3:first-child {
+    margin-top: 0;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.profile-section {
+    margin-bottom: 25px;
+}
+
+.skill-item {
+    margin-bottom: 3px;
+    line-height: 1.2;
+    color: #333;
+    font-size: 10.5px;
+    padding-left: 0;
+}
+
+
+
+.skills-section h4 {
+    color: #333;
+    margin: 15px 0 8px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.work-experience {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.work-experience .job {
+    margin-bottom: 10px;
+}
+
+.job-duties {
+    margin: 2px 0 0;
+    font-size: 10.5px;
+    line-height: 1.2;
+    color: #333;
+}
+
+.work-experience h4 {
+    font-size: 15px;
+    margin-bottom: 2px;
+    font-weight: 500;
+    color: #333;
+}
+
+.work-experience p {
+    font-style: normal;
+    margin-bottom: 3px;
+    font-size: 13px;
+    color: #555;
+}
+
+.work-experience p em {
+    font-style: italic;
+}
+
+.work-experience ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+.work-experience li {
+    margin-bottom: 6px;
+    line-height: 1.3;
+    font-size: 13.5px;
+    color: #333;
+}
+
+.header-box {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.professional-summary {
+    margin-bottom: 25px;
+}
+
+.professional-summary h3 {
+    color: #00a69c;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.professional-summary p {
+    line-height: 1.5;
+    font-size: 15px;
+    color: #333;
+}
+
+.qualifications-section {
+    margin-bottom: 25px;
+}
+
+.qualifications-section h3 {
+    color: #00a69c;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.qualifications-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.qualification-column {
+    width: 48%;
+}
+
+.qualification-item {
+    margin-bottom: 20px;
+}
+
+.qualification-item h4 {
+    color: #444;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.qualification-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.qualification-item li {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.certifications-section {
+    margin-bottom: 25px;
+}
+
+.certifications-section h3 {
+    color: #00a69c;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.certifications-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.certifications-section li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.key-achievements {
+    margin-top: 25px;
+}
+
+.key-achievements h3 {
+    color: #00a69c;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.key-achievements ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+.key-achievements li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Print styles for PDF generation */
+@media print {
+    html, body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+    }
+    
+    .controls {
+        display: none;
+    }
+    
+    .resume-container {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        width: 210mm;
+        height: 297mm;
+    }
+    
+    .resume-page {
+        page-break-after: always;
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        border: none;
+        overflow: hidden;
+    }
+    
+    .container {
+        padding: 0;
+        margin: 0;
+        width: 210mm;
+    }
+    
+    #resume-main {
+        border: none;
+        box-shadow: none;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-photo {
+        margin-top: 20px;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+    }
+    
+    .left-column, .right-column {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+}

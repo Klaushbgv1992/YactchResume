@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yacht Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <!-- Removed the separate screenshot.js, integrating directly in script.js -->
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <h1>Yacht Resume Builder</h1>
+            <p>Below is the preview of your resume exactly as shown in the images. Download in your preferred format:</p>
+            <div class="button-group">
+                <button id="downloadPngBtn">Download High-Resolution PNG</button>
+            </div>
+        </div>
+        
+        <div id="resume" class="resume-container">
+            <!-- Yacht Resume - Single unified design with fixed A4 dimensions -->
+            <div class="resume-page" id="resume-main">
+                <!-- Header with photo and contact info -->
+                <div class="header-section">
+                    <div class="personal-info">
+                        <h1>Heinrich Schroder</h1>
+                        <h2>Yacht Deckhand | Watersports Specialist</h2>
+                        <p class="location">
+                            <span class="icon">📍</span> Fort Lauderdale | Available: Immediately<br>
+                            <span class="icon">📞</span> +1 737 388 5131 | <span class="icon">📧</span> hein1930ka@icloud.com<br>
+                            English | Afrikaans | B1B2 Visa | Driver's License
+                        </p>
+                    </div>
+                    <div class="profile-photo">
+                        <div class="photo-placeholder"></div>
+                    </div>
+                </div>
+                
+                <!-- Professional Summary -->
+                <div class="summary">
+                    <p>Professional yacht deckhand with extensive experience in vessel maintenance, watersports, and marine operations. Specialized in exterior care, tender operations, and guest safety during water activities. STCW certified with mechanical expertise and commitment to exceptional service standards. Proven track record in maritime environments and luxury hospitality.</p>
+                </div>
+                
+                <!-- Main content area -->
+                <div class="two-column-section">
+                    <!-- Left column - Skills and Qualifications -->
+                    <div class="left-column">
+                        <div class="skills-section">
+                            <h3>Yacht & Maritime Skills</h3>
+                            <p class="skill-item"><strong>Exterior Maintenance:</strong> Expert in washdowns, polishing, and detailing</p>
+                            <p class="skill-item"><strong>Tender Operations:</strong> Safe handling, guest transfers, and maintenance</p>
+                            <p class="skill-item"><strong>Water Safety:</strong> Rescue procedures and emergency response</p>
+                            <p class="skill-item"><strong>Deck Operations:</strong> Line handling, fenders, equipment management</p>
+                            <p class="skill-item"><strong>Watersports:</strong> Instruction in multiple water activities</p>
+                            
+                            <h3>Technical Skills</h3>
+                            <p class="skill-item"><strong>Mechanical:</strong> Engines, pumps, and onboard systems</p>
+                            <p class="skill-item"><strong>Maintenance:</strong> Preventative care and troubleshooting</p>
+                            <p class="skill-item"><strong>Repair:</strong> Fiberglass and sports equipment servicing</p>
+                            <p class="skill-item"><strong>Tools:</strong> Proficient with power tools and diagnostic equipment</p>
+                            
+                            <h3>Certifications</h3>
+                            <p class="skill-item"><strong>STCW Basic Safety Training</strong> (2022)</p>
+                            <p class="skill-item"><strong>Security Awareness</strong> (MAPT-T-747)</p>
+                            <p class="skill-item"><strong>Personal Survival Techniques</strong> (MAPT-T-363)</p>
+                            <p class="skill-item"><strong>Basic Firefighting</strong> (BS-XIV-53)</p>
+                            <p class="skill-item"><strong>First Aid & CPR</strong> with oxygen administration</p>
+                            <p class="skill-item"><strong>Professional Watersports Instruction</strong></p>
+                            
+                            <h3>Key Achievements</h3>
+                            <p class="skill-item">Maintained exterior finish on 55m motoryacht to highest standards</p>
+                            <p class="skill-item">Led 40+ successful water rescues in challenging ocean conditions</p>
+                            <p class="skill-item">Managed maintenance program for fleet of watersports equipment</p>
+                            <p class="skill-item">Serviced machinery with 95% first-time fix rate</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Right column - Experience -->
+                    <div class="right-column">
+                        <div class="work-experience" style="flex-grow: 1;">
+                            <h3>Professional Experience</h3>
+                            
+                            <div class="job">
+                                <h4>Daywork Deckhand</h4>
+                                <p><strong>M/Y After You</strong> - 55m Motoryacht - <em>West Palm Beach (March 2025)</em></p>
+                                <p class="job-duties">Exterior maintenance including washdowns, polishing, and detailing, Vessel cleaning and painting, Preventative upkeep, Tender operations assistance, Equipment organization, Safety checks, Guest services support, Adaptability in luxury yacht environment</p>
+                            </div>
+                            
+                            <div class="job">
+                                <h4>Manager & Lead Watersports Instructor</h4>
+                                <p><strong>Vibe Surf School</strong> - <em>South Africa (2020) & Fort Lauderdale (2025)</em></p>
+                                <p class="job-duties">Daily operations management, Staff scheduling, Client booking, Expert watersports instruction, Surfing and paddleboarding training, Ocean awareness education, Guided ocean excursions, Client safety management, Watersports equipment maintenance and repair, Premium customer experience delivery</p>
+                            </div>
+                            
+                            <div class="job">
+                                <h4>Technical Specialist & Trainer</h4>
+                                <p><strong>Husqvarna Construction Equipment Division</strong> - <em>South Africa (2022 – 2024)</em></p>
+                                <p class="job-duties">Technical training on construction equipment, Power systems operation, Precision diagnostics, Servicing high-performance machinery, Equipment applications consulting, Safety protocols implementation, Marine-grade tool maintenance, Performance optimization</p>
+                            </div>
+                            
+                            <div class="job">
+                                <h4>Equipment Specialist</h4>
+                                <p><strong>Coastal Hire</strong> - <em>South Africa (2020 – 2022)</em></p>
+                                <p class="job-duties">Servicing construction equipment, Technical support and troubleshooting, Client equipment operation assistance, Preventative maintenance, Specialized machinery repair, Tool maintenance, Complex mechanical and electrical diagnostics, Marine systems issue resolution</p>
+                            </div>
+                            
+                            <div class="job">
+                                <h4>Surf Lifeguard Crew Leader & IRB Operator</h4>
+                                <p><strong>Herolds Bay & Buffalo Bay</strong> - <em>South Africa (2014 – 2019)</em></p>
+                                <p class="job-duties">Professional lifeguard team leadership, Water rescues in challenging ocean conditions, Inflatable Rescue Boat operation, Emergency response, Patrol operations, Preventative safety implementation, Hazard identification, Swimmer assistance, Marine safety equipment maintenance and repair</p>
+                            </div>
+                        </div>
+                        
+                        <div class="references-section">
+                            <h3>Professional References</h3>
+                            <div class="reference-columns">
+                                <div class="reference-column">
+                                    <p><strong>Greg Marshall</strong> | First Officer<br>
+                                    M/Y After You | +1 513 936 3153</p>
+                                    
+                                    <p><strong>Corrie Caitz</strong> | Owner<br>
+                                    Vibe Surf School | +1 721 587 5025</p>
+                                </div>
+                                
+                                <div class="reference-column">
+                                    <p><strong>Dirk Meiring</strong> | Technical Director<br>
+                                    Husqvarna | +27 82 877 6824</p>
+                                    
+                                    <p><strong>Burger Meyer</strong> | Maritime Safety Officer<br>
+                                    Garden Route Municipality | +27 81 795 6688</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
